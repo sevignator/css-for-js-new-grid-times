@@ -33,7 +33,7 @@ const MobileHeader = () => {
         </MainHeader>
       </header>
     </Wrapper>
-  )
+  );
 };
 
 const Wrapper = styled.div`
@@ -57,10 +57,6 @@ const ActionGroup = styled.div`
   display: flex;
   gap: 24px;
 
-  /*
-    FIX: Remove the inline spacing that comes with
-    react-feather icons.
-  */
   svg {
     display: block;
   }
@@ -70,8 +66,11 @@ const MainHeader = styled(MaxWidthWrapper)`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 32px;
-  margin-bottom: 48px;
+  margin-block: 32px 48px;
+
+  @media ${QUERIES.tabletAndUp} {
+    margin-block: 48px 72px;
+  }
 `;
 
 export default MobileHeader;

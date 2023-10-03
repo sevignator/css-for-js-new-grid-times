@@ -21,12 +21,10 @@ const DesktopHeader = () => {
               <Menu size={24} />
             </button>
           </ActionGroup>
-          <LogoWrapper>
-            <Logo />
-          </LogoWrapper>
+          <Logo />
           <SubscribeWrapper>
             <Button>Subscribe</Button>
-            <SubscriberLink href="#">Already a subscriber?</SubscriberLink>
+            <SubscribeLink href='#'>Already a subscriber?</SubscribeLink>
           </SubscribeWrapper>
         </Row>
       </header>
@@ -36,7 +34,7 @@ const DesktopHeader = () => {
 
 const Wrapper = styled.div`
   display: none;
-  padding-block: 45px;
+  margin-block: 16px 72px;
 
   @media ${QUERIES.laptopAndUp} {
     display: block;
@@ -46,39 +44,31 @@ const Wrapper = styled.div`
 const Row = styled(MaxWidthWrapper)`
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  justify-content: space-between;
   align-items: start;
 `;
 
 const ActionGroup = styled.div`
   display: flex;
   gap: 24px;
+  margin-top: 24px;
   padding-block: 8px;
-
-  /*
-    FIX: Remove the inline spacing that comes with
-    react-feather icons.
-  */
 
   svg {
     display: block;
   }
 `;
 
-const LogoWrapper = styled.div`
-  position: relative;
-  top: -25px;
-`;
-
 const SubscribeWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: auto;
-  gap: 0.5rem;
+  justify-self: end;
+  gap: 8px;
+  margin-top: 24px;
 `;
 
-const SubscriberLink = styled.a`
+const SubscribeLink = styled.a`
+  color: var(--color-gray-900);
   font-size: 0.875rem;
   font-style: italic;
   text-decoration: underline;
