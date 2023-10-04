@@ -49,10 +49,10 @@ const SpecialtyStoryGrid = () => {
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  grid-template-columns: 100%;
   gap: 48px;
 
-  @madia ${QUERIES.tabletAndUp} {
+  @media ${QUERIES.tabletAndUp} {
     gap: 64px;
   }
 
