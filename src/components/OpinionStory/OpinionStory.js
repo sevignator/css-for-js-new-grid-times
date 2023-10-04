@@ -6,7 +6,7 @@ const OpinionStory = ({ id, title, author, avatar }) => {
   return (
     <a href={`/story/${id}`}>
       <Wrapper>
-        <Avatar alt="" src={avatar} />
+        <Avatar alt='' src={avatar} />
         <div>
           <AuthorName>{author}</AuthorName>
           <ArticleTitle>{title}</ArticleTitle>
@@ -17,10 +17,15 @@ const OpinionStory = ({ id, title, author, avatar }) => {
 };
 
 const Wrapper = styled.article`
+  container-type: inline-size;
   display: flex;
   justify-content: space-between;
   gap: 16px;
   color: var(--color-gray-900);
+
+  @container (min-width: 500px) {
+    background-color: orange;
+  }
 
   @media ${QUERIES.tabletOnly} {
     display: block;

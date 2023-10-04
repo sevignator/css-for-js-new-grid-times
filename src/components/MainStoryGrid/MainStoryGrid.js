@@ -129,7 +129,7 @@ const StoryWrapper = styled.div`
   padding-bottom: 16px;
   border-bottom: solid 1px var(--color-gray-300);
 
-  :last-of-type {
+  &:last-of-type {
     margin-bottom: 0;
     padding-bottom: 0;
     border-bottom: 0;
