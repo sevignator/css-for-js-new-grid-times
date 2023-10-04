@@ -49,15 +49,15 @@ const SpecialtyStoryGrid = () => {
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 100%;
   gap: 48px;
 
   @media ${QUERIES.tabletAndUp} {
+    grid-template-columns: 100%;
     gap: 64px;
   }
 
   @media ${QUERIES.laptopAndUp} {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr minmax(0, 1fr);
     gap: 0;
   }
 `;
